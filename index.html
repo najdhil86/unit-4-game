@@ -69,25 +69,26 @@
             <div id = "randomTotalNumber"></div>
             
             <div id = "winsLoses">
-                <div>Wins:<span id="win"></span></div>
-                <div>Loses:<span id="lose"></span></div>
+                <div>Wins: <span id="win"></span></div>
+                <div>Loses: <span id="lose"></span></div>
             </div>
     </div>
 
     <div class="crystals">
 
         <span>
-            <button>Button 1</button>
-            <button>Button 2</button>
-            <button>Button 3</button>
-            <button>Button 4</button>
+
+            <img src="https://via.placeholder.com/100 " alt="" id = "img1" data-number ="">
+            <img src="https://via.placeholder.com/100 " alt="" id = "img2" data-number ="">
+            <img src="https://via.placeholder.com/100 " alt="" id = "img3" data-number ="">
+            <img src="https://via.placeholder.com/100 " alt="" id = "img4" data-number ="">
     
         </span>
     </div>
 
     <div id="totalHeader">Your total score is:</div>
 
-    <div class="totalScore"></div>
+    <div id="total"></div>
 
     <!-- jQuery -->
 
@@ -95,7 +96,76 @@
 
     <!-- Game Functionality  -->
 
-    <script src="assets/javascript/game.js"></script>
+    <!-- <script src="assets/javascript/game.js"></script> -->
+
+    <script>
+    //Display Computer's random choice
+
+    var randomTotalNumber = Math.floor(Math.random()*120 + 20);
+
+    console.log(typeof randomTotalNumber);
+
+    console.log(randomTotalNumber);
+
+
+    $('#randomTotalNumber').text(randomTotalNumber);
+
+    var win = 0;
+    var lose = 0;
+    var total = 0;
+
+    $('#win').text(win);
+    $('#lose').text(lose);
+    $('#total').text(total);
+
+    // Assigning 
+
+    function AppliedRandomNumber(){
+
+        var randomNumber  = Math.ceil(Math.random()*12);
+        return randomNumber;
+    }
+
+
+
+    // Set a function here when I get a chance
+
+    $('#img1').attr('data-number',AppliedRandomNumber());
+
+    $('#img2').attr('data-number',AppliedRandomNumber());
+
+    $('#img3').attr('data-number',AppliedRandomNumber());
+
+    $('#img4').attr('data-number',AppliedRandomNumber());
+
+
+
+    $('img').click("on", function(){
+
+        
+        var imgSelect = $(this).attr('data-number');
+
+   
+        // console.log(imgSelect);
+
+        // console.log(typeof imgSelect); < Checking what type of data type this variable is..
+
+        var newtotal = parseInt(imgSelect);
+
+        console.log(newtotal);
+        
+        var newnewtotal = newtotal + newtotal;
+
+        console.log(newnewtotal);
+        
+
+
+    })
+    
+
+    
+
+    </script>
 
     
 </body>
