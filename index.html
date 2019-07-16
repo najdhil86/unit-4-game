@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Crystal Collector</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+    div {
+        margin: 50px;
+    }
+    h1{
+        background-color: orange;
+        padding: 10px;
+        font-size: 25px;
+        color: white;
+        width: 25%;
+        
+    }
+
+    #randomTotalNumber{
+
+        padding: 20px;
+        background-color: green;
+        margin-right: 10px;
+    }
+    
+    #winsLoses {
+
+        background-color: aqua;
+        padding: 20px;
+    }
+
+    #totalHeader, #totalScore{
+
+        background-color: darkcyan;
+        padding: 20px;
+        width: 20%;
+    }
+
+    
+    </style>
+
+</head>
+<body>
+
+    <div><h1>CrystalsCollector!</h1></div>
+
+
+    <div> 
+        You will be given a random number at the start of the game.
+        
+        There are four cystals below. By clicking on a Crystal you will add a specific amount of points of ypur total score.
+
+        Ypu win the game by matching ypur total score to random number, you lose the game if your total score goes above the random number.
+
+        The value of each crystal is hidden from you until you clock on it.
+
+        Each time when the game starts, the game will change the values of each crystal
+
+    </div>
+
+    <div>
+            <div id = "randomTotalNumber"></div>
+            
+            <div id = "winsLoses">
+                <div>Wins:<span id="win"></span></div>
+                <div>Loses:<span id="lose"></span></div>
+            </div>
+    </div>
+
+    <div class="crystals">
+
+        <span>
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button>Button 3</button>
+            <button>Button 4</button>
+    
+        </span>
+    </div>
+
+    <div id="totalHeader">Your total score is:</div>
+
+    <div class="totalScore"></div>
+
+    <!-- jQuery -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Game Functionality  -->
+
+    <script src="assets/javascript/game.js"></script>
+
+    
+</body>
+</html>
