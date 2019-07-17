@@ -1,13 +1,13 @@
 //Display Computer's random choice
 
-    var randomTotalNumber = Math.floor(Math.random()*120 + 20);
+    var computerTotal = Math.floor(Math.random()*120 + 20);
 
-    console.log(typeof randomTotalNumber);
+    console.log(typeof computerTotal);
 
-    console.log(randomTotalNumber);
+    console.log(computerTotal);
 
 
-    $('#randomTotalNumber').text(randomTotalNumber);
+    $('#computerTotal').text(computerTotal);
 
     var win = 0;
     var lose = 0;
@@ -20,48 +20,79 @@
 
     // Assigning 
 
-    function AppliedRandomNumber(){
+    function imgRandomNumber(){
 
-        var randomNumber  = Math.ceil(Math.random()*12);
-        return randomNumber;
+        var randomImgNumber  = Math.ceil(Math.random()*12);
+        return randomImgNumber;
     }
 
 
 
     // Set a function here when I get a chance
 
-    $('#img1').attr('data-number',AppliedRandomNumber());
+    $('#img1').attr('data-number',imgRandomNumber());
 
-    $('#img2').attr('data-number',AppliedRandomNumber());
+    $('#img2').attr('data-number',imgRandomNumber());
 
-    $('#img3').attr('data-number',AppliedRandomNumber());
+    $('#img3').attr('data-number',imgRandomNumber());
 
-    $('#img4').attr('data-number',AppliedRandomNumber());
+    $('#img4').attr('data-number',imgRandomNumber());
 
 
 
     $('img').click("on", function(){
-
         
-        var imgSelect = $(this).attr('data-number');
-
-   
-        // console.log(imgSelect);
-
-        // console.log(typeof imgSelect); < Checking what type of data type this variable is..
-
-        // var new_total = $('#total').attr('data-total');
-
-        var newtotal = parseInt(imgSelect);
-
-        console.log("New Total:" + newtotal);
         
+        //Check if the user score is lower than computer's total
 
-        userScore = newtotal + userScore;
+        //Conditions
 
-        console.log("User Score Total:"+ userScore);
+        if (userScore < computerTotal){
 
-        $('#total').text(userScore);
+            var imgSelect = $(this).attr('data-number');
+
+            var newtotal = parseInt(imgSelect);
+            console.log("New Total:" + newtotal);
+
+            userScore = newtotal + userScore;
+            console.log("User Score Total:"+ userScore);
+
+            $('#total').text(userScore);
+        }
+
+        if (userScore > computerTotal) {
+
+            lose+= 1;
+            $('#lose').text(lose);
+
+            //reset variables
+            userScore = 0;
+            
+
+            $('#img1').attr('data-number',imgRandomNumber());
+
+            $('#img2').attr('data-number',imgRandomNumber());
+        
+            $('#img3').attr('data-number',imgRandomNumber());
+        
+            $('#img4').attr('data-number',imgRandomNumber());            
+        }
+
+        if (userScore == computerTotal){
+
+            win += 1;
+
+            userScore;
+            
+            $('#img1').attr('data-number',imgRandomNumber());
+
+            $('#img2').attr('data-number',imgRandomNumber());
+        
+            $('#img3').attr('data-number',imgRandomNumber());
+        
+            $('#img4').attr('data-number',imgRandomNumber());      
+        }
+        
     
         
 
