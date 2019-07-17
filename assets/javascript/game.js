@@ -26,6 +26,26 @@
         return randomImgNumber;
     }
 
+    function reset() {
+
+        userScore = 0;
+
+        $('#total').text(userScore);
+            
+        computerTotal = Math.floor(Math.random()*120 + 20);
+
+        $('#computerTotal').text(computerTotal);
+
+        $('#img1').attr('data-number',imgRandomNumber());
+
+        $('#img2').attr('data-number',imgRandomNumber());
+    
+        $('#img3').attr('data-number',imgRandomNumber());
+    
+        $('#img4').attr('data-number',imgRandomNumber());
+
+    }
+
 
 
     // Set a function here when I get a chance
@@ -66,35 +86,16 @@
             $('#lose').text(lose);
 
             //reset variables
-            userScore = 0;
+
+            reset();
             
-
-            $('#img1').attr('data-number',imgRandomNumber());
-
-            $('#img2').attr('data-number',imgRandomNumber());
-        
-            $('#img3').attr('data-number',imgRandomNumber());
-        
-            $('#img4').attr('data-number',imgRandomNumber());            
-        }
-
-        if (userScore == computerTotal){
+        } else if (userScore == computerTotal){
 
             win += 1;
+            $('#win').text(win);
 
-            userScore;
-            
-            $('#img1').attr('data-number',imgRandomNumber());
+            //reset variables
 
-            $('#img2').attr('data-number',imgRandomNumber());
-        
-            $('#img3').attr('data-number',imgRandomNumber());
-        
-            $('#img4').attr('data-number',imgRandomNumber());      
+            reset();
         }
-        
-    
-        
-
-
     })
