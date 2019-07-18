@@ -1,0 +1,44 @@
+div {
+    margin: 50px;
+}
+h1{
+    background-color: #cb6f34;
+    padding: 30px;
+    font-size: 25px;
+    color: white;
+    width: 35%
+}
+
+#computerTotal{
+
+    padding: 20px;
+    background-color: #54c985;
+    margin-right: 10px;
+    color: #4b1e55; 
+}
+
+#winsLoses {
+
+    background-color: #3dfefd;
+    padding: 20px;
+}
+
+#totalHeader, #total{
+
+    background-color: #22a495;
+    padding: 20px;
+    width: 20%;
+    color: white;
+
+
+}
+
+#bodyParagraph{
+
+    background-color: #fbe6cf;
+    color: #2d9752;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+} 

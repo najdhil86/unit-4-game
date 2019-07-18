@@ -9,86 +9,65 @@
 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-    div {
-        margin: 50px;
-    }
-    h1{
-        background-color: orange;
-        padding: 10px;
-        font-size: 25px;
-        color: white;
-        width: 25%;
-        
-    }
-
-    #computerTotal{
-
-        padding: 20px;
-        background-color: green;
-        margin-right: 10px;
-    }
-    
-    #winsLoses {
-
-        background-color: aqua;
-        padding: 20px;
-    }
-
-    #totalHeader, #totalScore{
-
-        background-color: darkcyan;
-        padding: 20px;
-        width: 20%;
-    }
-
-    
-    </style>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
 
-    <div><h1>CrystalsCollector!</h1></div>
-
-
-    <div> 
-        You will be given a random number at the start of the game.
+    <div class="container">
         
-        There are four cystals below. By clicking on a Crystal you will add a specific amount of points of ypur total score.
+        <div class="row">
+            <div class="col-lg-12">
 
-        Ypu win the game by matching ypur total score to random number, you lose the game if your total score goes above the random number.
-
-        The value of each crystal is hidden from you until you clock on it.
-
-        Each time when the game starts, the game will change the values of each crystal
-
-    </div>
-
-    <div>
-            <div id = "computerTotal"></div>
+                <h1>CrystalsCollector!</h1>
             
-            <div id = "winsLoses">
-                <div>Wins: <span id="win"></span></div>
-                <div>Loses: <span id="lose"></span></div>
             </div>
-    </div>
-
-    <div class="crystals">
-
-        <span>
-
-            <img src="https://via.placeholder.com/100 " alt="" id = "img1" data-number ="">
-            <img src="https://via.placeholder.com/100 " alt="" id = "img2" data-number ="">
-            <img src="https://via.placeholder.com/100 " alt="" id = "img3" data-number ="">
-            <img src="https://via.placeholder.com/100 " alt="" id = "img4" data-number ="">
+        </div>
+        
+        
+        <div class="col-md-7" id = "bodyParagraph"> 
+            You will be given a random number at the start of the game.
+            
+            There are four cystals below. By clicking on a Crystal you  will add a specific amount of points of ypur total score.
+        
+            Ypu win the game by matching ypur total score to random     number, you lose the game if your total score goes above the    random number.
+        
+            The value of each crystal is hidden from you until you clock    on it.
+        
+            Each time when the game starts, the game will change the    values of each crystal
+        
+        </div>
     
-        </span>
+        <div class= "row">
+
+                <div class= "col-md-2" id = "computerTotal"></div>
+                
+                <div class= "col-md-3" id = "winsLoses">
+
+                    <div>Wins: <span id="win"></span></div>
+
+                    <div>Loses: <span id="lose"></span></div>
+
+                </div>
+        </div>
+
+        <div class="crystals">
+        
+            <span>
+            
+                <img src="https://via.placeholder.com/100 " alt="" id =     "img1" data-number ="">
+                <img src="https://via.placeholder.com/100 " alt="" id =     "img2" data-number ="">
+                <img src="https://via.placeholder.com/100 " alt="" id =     "img3" data-number ="">
+                <img src="https://via.placeholder.com/100 " alt="" id =     "img4" data-number ="">
+            
+            </span>
+        </div>
+
+        <div id="totalHeader">Your total score is:</div>
+
+        <div id="total"></div>
+
     </div>
-
-    <div id="totalHeader">Your total score is:</div>
-
-    <div id="total"></div>
 
     <!-- jQuery -->
 
