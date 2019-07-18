@@ -32,7 +32,7 @@
 
         $('#total').text(userScore);
             
-        computerTotal = Math.floor(Math.random()*120 + 20);
+        computerTotal = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 
         $('#computerTotal').text(computerTotal);
 

@@ -1,12 +1,19 @@
+body {
+    
+    background-image: url("../images/swirl_pattern.png");
+}
+
 div {
     margin: 50px;
+    
 }
 h1{
     background-color: #cb6f34;
     padding: 30px;
     font-size: 25px;
     color: white;
-    width: 35%
+    width: 57%;
+    font-family: 'Bungee Shade', cursive;
 }
 
 #computerTotal{
@@ -15,12 +22,18 @@ h1{
     background-color: #54c985;
     margin-right: 10px;
     color: #4b1e55; 
+    font-size: 42px;
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+
 }
 
 #winsLoses {
 
     background-color: #3dfefd;
     padding: 20px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 #totalHeader, #total{
@@ -29,8 +42,15 @@ h1{
     padding: 20px;
     width: 20%;
     color: white;
+    text-align: center;
+    
+}
 
+#total{
 
+    font-size: 42px;
+    font-family: 'Bungee Shade', cursive;
+    
 }
 
 #bodyParagraph{
@@ -40,5 +60,9 @@ h1{
 
     padding-top: 50px;
     padding-bottom: 50px;
+
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
 
 } 
